@@ -130,13 +130,93 @@ fn main() {
 ```
 
 ## Tuples
+**Length Of Tuples Cannot Change After Declaration**
 ```rust
 fn main() {
     let tup: (i32, f64, u8) = (-500, 6.4, 3);
 
+    // Destructuring A tuple
     let (x, y, z) = tup;
     // x = -500
     // y = 6.4
     // z = 3
+
+    // Directory Access A Tuple
+    let x = tup.0
+    let y = tup.1
+    let z = tup.2
 }
 ```
+
+## Arrays
+**Explicitly Stored On Stack**
+**Length Of Tuples Cannot Change After Declaration**
+```rust
+fn main() {
+    // Creating Arrays
+    let array = [ 1, 2, 3, 4, 5 ];
+
+           // Five i32 Values
+    let a: [i32; 5] = [ 1, 2, 3, 4, 5];
+
+           // Five Values Set To 5
+    let a = [3; 5];    
+
+    // Accessing Arrays
+    let array = [ 1, 2, 3, 4, 5 ];
+
+    let val_one = a[0];
+    let val_two = a[1];
+}
+```
+
+# Functions
+```rust
+// Basic Function
+fn function_name() {
+    println!("Hello");
+}
+
+fn main() {
+    function_name();
+}
+
+// One Parameter
+fn function_name(x: i32) {
+    println!("{x}");
+}
+fn main() {
+    function_name(5);
+}
+
+// Multiple Parameters
+fn function_name(x: i32, b: char) {
+    print("{x} {b}");
+}
+fn main() {
+    function_name(5, "C");
+}
+
+// Return Values
+fn return_five() -> i32 {
+    5 // Being this line is an expression as it doesn't end with a semi-colon the value will be returned within this scope
+}
+fn main() {
+    let x = return_five();
+}
+```
+
+# Comments
+```rust
+// Single Line Comment
+
+/* 
+Multi
+Line
+Comment
+*/
+```
+
+# Control Flow
+[Operators](https://doc.rust-lang.org/book/appendix-02-operators.html)
+
